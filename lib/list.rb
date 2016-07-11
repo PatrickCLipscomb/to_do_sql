@@ -28,7 +28,7 @@ class List
       end
     end
   end
-  define_method(:delete) do |id|
+  define_singleton_method(:delete) do |id|
     DB.exec("DELETE FROM lists WHERE id = #{id}")
   end
 end

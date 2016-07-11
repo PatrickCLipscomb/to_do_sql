@@ -37,7 +37,7 @@ describe(List) do
     it('will delete a list from the table of lists') do
       test1 = List.new({:name => 'sinatra magic', :id => nil})
       test1.save()
-      test1.delete(test1.id())
+      List.delete(test1.id())
       expect(List.all()).to(eq([]))
     end
   end

@@ -76,3 +76,10 @@ get('/tasks/:list_id/:id') do
   @task_arry
   erb(:tasks)
 end
+
+get('/delete_list/:list_id') do
+  list_id = params.fetch("list_id").to_i()
+  List.delete(list_id)
+  @lists = List.all()
+  erb(:list)
+end

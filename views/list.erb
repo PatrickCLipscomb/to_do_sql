@@ -11,4 +11,12 @@
   <p>There are no lists yet</p>
 <% end %>
 
-<a href="/add_new_list_page">Add a new list</a>
+<span class="btn btn-success" id="new_list_toggle">Add a new list</span>
+
+<div class="container" id="new_list_name">
+  <form action="/new_list" method="post">
+    <label for="name">Enter name</label>
+    <input type="text" name="name" value="">
+    <button type="submit" name="button" id="new_list_hide">Create new list</button>
+  </form>
+</div>

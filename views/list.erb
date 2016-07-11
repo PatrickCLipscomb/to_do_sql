@@ -1,0 +1,14 @@
+<h1>Your current Lists</h1>
+
+<% if @lists.any?() %>
+  <h3>Here are your lists:</h3>
+  <ul>
+    <%@lists.each() do |list| %>
+      <li><a href="/lists/<%= list.id()%>"><%= list.name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no lists yet</p>
+<% end %>
+
+<a href="/add_new_list_page">Add a new list</a>

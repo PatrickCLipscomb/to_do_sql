@@ -1,0 +1,15 @@
+<h1>Your current Tasks</h1>
+
+
+  <ul>
+    <%@task_arry.each() do |task| %>
+      <li><a href="/tasks/<%=task.list_id%>/<%=task.id%>"><%= task.description() %></a></li>
+    <% end %>
+  </ul>
+
+<a href="/list_page">back to the lists</a>
+
+<form action="/add_new_task_page">
+  <input type="hidden" name="id" value="<%= @list_id %>">
+  <button type="submit">Add a new task</button>
+</form>
